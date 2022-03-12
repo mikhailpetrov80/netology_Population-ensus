@@ -34,7 +34,7 @@ public class Main {
         workers.filter(person -> person.getAge() > 18)
                 .filter(person -> person.getEducation().equals("HIGHER"))
                 .filter(person -> person.getAge() < 65)
-                .filter(person -> !Objects.equals(person.getSex().equals("WOMAN"), person.getAge() < 60))
+                .filter(person -> !Objects.equals(person.getSex().equals("WOMAN"), person.getAge() > 60))
                 .sorted(Comparator.comparing(person -> person.getFamily()))
                 .collect(Collectors.toList());
     }
